@@ -12,4 +12,6 @@ WORKDIR /app/LanguageTool
 
 EXPOSE 8010
 
-CMD ["java", "-cp", "languagetool-server.jar", "org.languagetool.server.HTTPServer", "--port", "8010", "--public"]
+
+CMD ["java", "-cp", "languagetool-server.jar:.", "org.languagetool.server.LanguageToolServer", "--port", "8010", "--public"]
+
