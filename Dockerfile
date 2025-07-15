@@ -1,9 +1,7 @@
-# SPDX-License-Identifier: LGPL-3.0-or-later
 FROM eclipse-temurin:19
 
 WORKDIR /app
 
-# Download and extract latest stable LanguageTool
 RUN apt update && apt install -y unzip curl && \
     curl -L -o languagetool.zip https://languagetool.org/download/LanguageTool-stable.zip && \
     unzip languagetool.zip && \
